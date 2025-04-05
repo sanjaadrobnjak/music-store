@@ -1,0 +1,33 @@
+<p>info works!</p>
+<nav class="navbar">
+    <ul>
+        <!--<li class="navbar-logo"><img src="../favicon.ico" alt="Logo"></li>-->
+        <li><a href="">Home</a></li>
+        <li><a href="artists">Artists</a></li>
+        <li><a href="instruments">Instruments</a></li>
+        <li><strong>Contact Information</strong></li>
+    </ul>
+</nav>
+<p>This is text about contact information</p>
+
+
+
+<table>
+    <tr>
+        <td>Email Address</td>
+        <td> <input type="text" [(ngModel)]="email"></td>
+    </tr>
+    <tr>
+        <td>Subject</td>
+        <td><input type="text" [(ngModel)]="subject"></td>
+    </tr>
+    <tr>
+        <td>Body</td>
+        <td><textarea rows="10" cols="50" [(ngModel)]="body"></textarea></td>
+    </tr>
+    <tr>
+        <td><button (click)="submit()">Submit</button></td>
+    </tr>
+</table>
+<p class="error">{{ error }}</p>
+<p class="message"> {{ message }}</p>
