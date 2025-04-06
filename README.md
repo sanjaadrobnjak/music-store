@@ -5,12 +5,12 @@ The Music Store Project is a dynamic web application designed to offer users an 
 
 ## Technologies Used
 - **Frontend:** 
-  - Angular (version ) - frontend application framework
+  - Angular (version 18) - frontend application framework
   - Bootstrap - styling and responsive layout framework
   - HTML5 - Structure
   - CSS - Design
 - **Backend:**
-  - Node.js - JavaScript runtime enviroment
+  - Node.js (version 22) - JavaScript runtime enviroment
   - Express.js - web application framework for Node.js
 - **Database:**
   - MongoDB Compass - GUI for MongoDB, used to import and manage JSON-based data
