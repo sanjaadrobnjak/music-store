@@ -1,48 +1,26 @@
-<p>artists works!</p>
-<nav class="navbar">
-    <ul>
-        <!--<li class="navbar-logo"><img src="../favicon.ico" alt="Logo"></li>-->
-        <li><a href="">Home</a></li>
-        <li><strong>Artists</strong></li>
-        <li><a href="instruments">Instruments</a></li>
-        <li><a href="info" class="btn">Contact Information</a></li>
-    </ul>
-</nav>
+<br>
 
-<div class="container">
-    <h2>List of artists</h2>
-  
-    <div *ngIf="message">{{ message }}</div>
-    
-    <div *ngIf="artists.length == 0">There are no artists to show!</div>
-  
-    <div class="row">
-      <div class="col-md-4" *ngFor="let a of artists">
-        <div class="card">
-          <img [src]="a.image_url" class="card-img-top" alt="{{ a.name }}">
-          <div class="card-body">
-            <h5 class="card-title">{{a.artist_id}} {{ a.name }}</h5>
-            <p>Bio {{a.bio}}</p>    
-            <div *ngFor="let al of a.albums" class="albums-container">
-                <table>
-                  <tr>
-                    <td>{{ al.album_id }} <strong>Title:</strong></td>
-                    <td>{{ al.title }}</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Release date:</strong></td>
-                    <td>{{ al.release_date }} €</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Genre:</strong></td>
-                    <td>{{ al.genre }}</td>
-                  </tr>
-                </table>
-                <br>
-              </div>                   
-            <hr>
+<div class="container-fluid px-4">
+  <h2 *ngIf="artists.length==0" class="text-center text-uppercase mb-4" id="err-msg"> There are no artists to show!!!</h2>    
+  <div class="row g-4">
+    <div *ngFor="let artist of artists" class="card mb-4 shadow-sm p-3 artist-card">
+      <div class="d-flex flex-column flex-md-row">
+        <img [src]="artist.image_url" class="img-thumbnail artist-image me-4 mb-3 mb-md-0" alt="{{ artist.name }}" />
+        <div>
+          <h4>{{ artist.name }}</h4>
+          <p class="text-muted">{{ artist.bio }}</p>    
+          <h5 class="mt-4">Albums</h5>
+          <div class="row row-cols-1 row-cols-md-2 g-3">
+            <div *ngFor="let album of artist.albums" class="col">
+              <div class="album-card">
+                <h6 class="mb-1">{{ album.title }}</h6>
+                <p class="mb-0"><strong>Release:</strong> {{ album.release_date | date }}</p>
+                <p class="mb-0"><strong>Genre:</strong> {{ album.genre }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

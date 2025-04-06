@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: #f0e1e3;
+}
+
+#navigation-bar{
+    background-color: #d2a2a9;
+}
+
+#music-store{
+    color: #753843;
+}
+
+.nav-link{
+    color: #753843;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+}
+
+#details{
+    font-style: italic;
+}
+  

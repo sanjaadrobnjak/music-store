@@ -1,33 +1,37 @@
-<p>info works!</p>
-<nav class="navbar">
-    <ul>
-        <!--<li class="navbar-logo"><img src="../favicon.ico" alt="Logo"></li>-->
-        <li><a href="">Home</a></li>
-        <li><a href="artists">Artists</a></li>
-        <li><a href="instruments">Instruments</a></li>
-        <li><strong>Contact Information</strong></li>
-    </ul>
-</nav>
-<p>This is text about contact information</p>
+<br>
+<div class="container">
+    
+    <h2 class="text-center text-uppercase mb-4" id="contact-title">Contact Us - Music Store</h2>
+    <p id="t">We would love to hear from you, whether you have a question about our instruments or need help with an order, feel free to contact us!</p>
+    <br>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" [(ngModel)]="email" />
+                </div>
+                
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" [(ngModel)]="subject" />
+                </div>
+                
+                <div class="mb-3">
+                    <label for="body" class="form-label">Message</label>
+                    <textarea class="form-control" id="body" rows="6" [(ngModel)]="body"></textarea>
+                </div>
+                
+                <button class="btn btn-primary" (click)="submit()" id="btn">Submit</button>
+                <br>
+                <h5 class="error">{{ error }}</h5>
+                <h5 class="message"> {{ message }}</h5>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
-<table>
-    <tr>
-        <td>Email Address</td>
-        <td> <input type="text" [(ngModel)]="email"></td>
-    </tr>
-    <tr>
-        <td>Subject</td>
-        <td><input type="text" [(ngModel)]="subject"></td>
-    </tr>
-    <tr>
-        <td>Body</td>
-        <td><textarea rows="10" cols="50" [(ngModel)]="body"></textarea></td>
-    </tr>
-    <tr>
-        <td><button (click)="submit()">Submit</button></td>
-    </tr>
-</table>
-<p class="error">{{ error }}</p>
-<p class="message"> {{ message }}</p>
+

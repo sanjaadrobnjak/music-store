@@ -1,0 +1,33 @@
+.artist-card{
+    border: 1px solid #bd8791;
+    border-radius: 12px;
+  }
+  
+.artist-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+  
+.album-card{
+    border: 1px solid #bd8791; 
+    border-radius: 12px;
+    padding: 10px;
+
+}
+
+h5,
+h4,
+#err-msg
+{
+    color: #753843;
+}
+
+h4{
+    font-weight: bold;
+}
+
+h6{
+    font-weight: bolder;
+    color: #753843;
+}

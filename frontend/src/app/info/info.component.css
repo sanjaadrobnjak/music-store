@@ -1,0 +1,38 @@
+#contact-title
+{
+    color: 	#753843;
+    font-weight: bold;
+}
+  
+p{
+    color: #753843;
+    margin: 0;
+    size: 16px;
+}
+
+#t{
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+}
+
+.card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff5f6;
+    border: 1px solid #e6bbbd;
+    border-radius: 12px;
+    padding: 16px;
+    color: #753843;
+}
+
+#btn{
+    background-color: #a87e88;
+    border: #a87e88;
+}
+  
+.error,
+.message
+{
+    text-align: center;
+}

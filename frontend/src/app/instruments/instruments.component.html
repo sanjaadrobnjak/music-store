@@ -1,74 +1,26 @@
-<!--<div class="container">
-    <h2>Lista instrumenata</h2>
-  
-    <div *ngIf="message">{{ message }}</div>
-    
-    <div *ngIf="products.length === 0">There is no products to show!</div>
-  
-    <div class="row">
-      <div class="col-md-4" *ngFor="let p of products">
-        <div class="card">
-          <img [src]="p.image_url" class="card-img-top" alt="{{ p.name }}">
-          <div class="card-body">
-            <h5 class="card-title">{{p.id}} {{ p.name }}</h5>
-            <p>Category {{p.category}}</p>
-            <p><strong>Price:</strong> {{ p.price }} €</p>
-            <p>Stock {{p.stock}}</p>
-            <p>Description {{ p.description }}</p>
-            <p>Manufacturer {{ p.manufacturer }}</p>
-            <p>Rating {{p.rating}}</p>            
-            <hr>
+
+<br>
+<div class="container-fluid px-4">
+  <h2 *ngIf="products.length==0" class="text-center text-uppercase mb-4" id="err-msg">There are no products to show!!!</h2>
+
+  <div class="row g-4">
+    <div class="col-lg-6 col-md-12" *ngFor="let p of products">
+      <div class="card shadow-sm">
+        <div class="product-card">
+          <img [src]="p.image_url" alt="{{ p.name }}" class="product-image" />
+          <div class="product-details">
+            <h5 class="card-title"> {{ p.id }}. {{ p.name }}</h5>
+            <div class="text-muted " id="details"> 
+              {{ p.manufacturer }} - {{ p.category }} - {{ p.rating }} / 5⭐ <br>       
+            </div>
+            <p class="text-muted">{{ p.description }}</p>
+            <div class="price-stock-row">
+              <p class="left-text" id="price">{{ p.price | currency: 'EUR'}}</p>
+              <p class="right-text">{{ p.stock }} in stock</p>
+            </div>    
           </div>
-        </div>
+        </div>      
       </div>
     </div>
   </div>
--->
-
-<nav class="navbar">
-    <ul>
-        <!--<li class="navbar-logo"><img src="../favicon.ico" alt="Logo"></li>-->
-        <li><a href="">Home</a></li>
-        <li><a href="artists">Artists</a></li>
-        <li><strong>Music Instruments</strong></li>
-        <li><a href="info" class="btn">Contact Information</a></li>
-    </ul>
-</nav>
-
-<div *ngFor="let p of products" class="instrument-container">
-    <table>
-      <tr>
-        <td rowspan="7">
-          <img [src]="p.image_url" alt="{{ p.name }}" width="150">
-        </td>
-        <td><strong>{{p.id}} Name:</strong></td> 
-        <td>{{ p.name }}</td>
-      </tr>
-      <tr>
-        <td><strong>Category:</strong></td>
-        <td>{{ p.category }}</td>
-      </tr>
-      <tr>
-        <td><strong>Price:</strong></td>
-        <td>{{ p.price }} €</td>
-      </tr>
-      <tr>
-        <td><strong>Stock:</strong></td>
-        <td>{{ p.stock }}</td>
-      </tr>
-      <tr>
-        <td><strong>Description:</strong></td> 
-        <td>{{ p.description }} </td>
-      </tr>
-      <tr>
-        <td><strong>Manufacturer:</strong></td>
-        <td>{{ p.manufacturer }}</td>
-      </tr>
-      <tr>
-        <td><strong>Rating</strong></td>
-        <td>{{ p.rating }}⭐</td>
-      </tr>
-    </table>
-    <br>
-  </div>
-  
+</div>
