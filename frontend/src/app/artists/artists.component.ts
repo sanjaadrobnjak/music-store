@@ -12,7 +12,6 @@ import { ArtistsService } from '../services/artists.service';
 })
 export class ArtistsComponent implements OnInit {
   artists: Artist[] = [];
-  message = "";
 
   constructor( private artistService: ArtistsService) {}
   

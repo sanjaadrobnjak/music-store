@@ -1,8 +1,8 @@
 import express = require('express');
 import cors = require("cors");
 import mongoose from 'mongoose';
-import productRouter from './routers/product.router';
-import artistRouter from './routers/artist.router';
+import productRouter from './routes/product.router';
+import artistRouter from './routes/artist.router';
 
 
 var app = express();
@@ -21,6 +21,5 @@ router.use("/products", productRouter);
 router.use("/artists", artistRouter);
 
 app.use("/", router);
-//app.use("/products", productRouter);
 
 app.listen(4000, () => console.log(`Express server running on port 4000`));

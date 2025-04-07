@@ -12,23 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class InstrumentsComponent implements OnInit {
   products: Product[] = [];
-  message = "";
 
   constructor( private productService: ProductsService) {}
-
-  /*ngOnInit(): void {
-    this.productService.getAllProducts().subscribe({
-      next: (data: Product[]) => {
-        this.products = data;
-
-        this.products.sort((a, b) => b.id - a.id);
-      },
-      error: (err) => {
-        console.error("Greška pri učitavanju instrumenata: ", err);
-        this.message = "Greška pri učitavanju instrumenata!";
-      }
-    });
-  }*/
 
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe((data) => {

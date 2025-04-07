@@ -4,7 +4,7 @@
   <h2 *ngIf="products.length==0" class="text-center text-uppercase mb-4" id="err-msg">There are no products to show!!!</h2>
 
   <div class="row g-4">
-    <div class="col-lg-6 col-md-12" *ngFor="let p of products">
+    <div class="col-lg-6 col-sm-12" *ngFor="let p of products">
       <div class="card shadow-sm">
         <div class="product-card">
           <img [src]="p.image_url" alt="{{ p.name }}" class="product-image" />
